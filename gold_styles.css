@@ -1,0 +1,136 @@
+/* master styling */
+body {
+  font-family: "Titillium Web", sans-serif;
+  margin: 0px;
+}
+
+.container {
+  display: grid;
+  /* 1 fractional unit (100%) - see this in developer mode */
+  grid-template-columns: 1fr;
+}
+
+/* navigational styling */
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.left-side {
+  display: flex;
+}
+
+.nav-wrapper > .left-side > div {
+  margin-right: 10px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+  height: 22px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.5s;
+}
+
+/* styling the links on navigation bar */
+.nav-link-wrapper a {
+  color: #1c2833;
+  /* remove default link underline */
+  text-decoration: none;
+  /* half a second transition */
+  transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+  border-bottom: 1px solid #abb2b9;
+}
+
+.nav-link-wrapper a:hover {
+  color: #abb2b9;
+}
+
+/* So users know what page they are on */
+.active-nav-link {
+  border-bottom: 1px solid#abb2b9;
+}
+
+.active-nav-link a {
+  color: #abb2b9 !important;
+}
+
+/* Project Styles */
+.project-group-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.project-individual-wrapper {
+  position: relative;
+}
+
+.project-img-background {
+  height: 350px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding-left: 65px;
+  padding-right: 65px;
+}
+
+.logo-wrapper img {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.img-text-wrapper .subtitle {
+  transition: 1s;
+  font-weight: 600;
+  color: transparent;
+}
+
+.img-text-wrapper:hover .subtitle {
+  font-weight: 600;
+
+  color: #ffff33;
+}
+
+/* Creating a hover mode over the projects */
+.img-darken {
+  transition: 1s;
+  filter: brightness(15%);
+}
+
+/* Contact Us Styling */
+.two-column-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.profile-image-wrapper {
+  width: 100%;
+}
+
+.profile-content-wrapper {
+  padding: 40px;
+}
+
+.profile-content-wrapper h1 {
+  color: #abb2b9;
+}
+
+.profile-content-wrapper p {
+  color: #1c2833;
+}

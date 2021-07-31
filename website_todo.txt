@@ -1,0 +1,27 @@
+My to do list for Assignment 1
+
+1. Build the project (folder structure, images - see pixabay and unsplash.com - include credits)
+2. Navigation Bar (all links and business name)
+HOME (INDEX.HTML)
+REFRIGERATION - WITH PRODUCT SEARCH
+AIR CONDITIONING - WITH PRODUCT SEARCH
+CONTACT 
+3. SEARCH BARS (REFRIGERATION AND AIRCON)
+4. PRODUCT RANGE (IMAGES)
+5. PROJECTS (INCLUDE ON HOME PAGE TO BE EASILY LOCATED - NOT HIDDEN)
+6. ESTIMATE PAGE (FORM)
+7. PROCEED TO FORMAL QUOTE (FORM - WITH CAPTCHA AND VALIDATION)
+8. PRIVACY STATEMENT (LEGAL REQUIREMENT)
+9. COPYRIGHT
+10. BRAND CSS FOR STYLES 
+BRAND COLOUR RANGE
+H1
+H2
+H3
+BODY
+links
+
+Use flex bot to align for elements
+Use grid align items for layout
+
+figma prototype - double check if this is in assessment requirement.
