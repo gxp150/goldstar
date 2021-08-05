@@ -23,5 +23,6 @@ links
 
 Use flex bot to align for elements
 Use grid align items for layout
+use media to resize for multiple devices
 
 figma prototype - double check if this is in assessment requirement.
