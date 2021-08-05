@@ -1,13 +1,20 @@
 /* master styling */
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Titillium Web", sans-serif;
   margin: 0px;
+  flex-wrap: wrap;
 }
 
 .container {
   display: grid;
   /* 1 fractional unit (100%) - see this in developer mode */
   grid-template-columns: 1fr;
+  flex-wrap: wrap;
 }
 
 /* navigational styling */
@@ -15,13 +22,19 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 40px;
+  flex-wrap: wrap;
 }
 
 .left-side {
   display: flex;
 }
 
-.nav-wrapper > .left-side > div {
+.right-side {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-wrapper > .right-side > div {
   margin-right: 10px;
   font-size: 0.9em;
   text-transform: uppercase;
@@ -75,6 +88,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  flex-wrap: wrap;
 }
 
 .img-text-wrapper {
@@ -119,18 +133,92 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 
-.profile-image-wrapper {
+/* Services Styling */
+.one-column-wrapper {
+  display: absolute;
+  grid-template-columns: 1fr;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.contact-image-wrapper {
   width: 100%;
 }
 
-.profile-content-wrapper {
+.content-wrapper {
   padding: 40px;
 }
 
-.profile-content-wrapper h1 {
+.content-wrapper h1 {
   color: #abb2b9;
 }
 
-.profile-content-wrapper p {
+.content-wrapper p {
   color: #1c2833;
+}
+
+.search-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -100%);
+  background: rgba(0, 0, 0.6);
+  max-width: 550px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  /* put the search icon on same row using flex */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.wrapper .input {
+  width: 85%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.searchbtn {
+  background: #ffff33;
+  width: 10%;
+  border-radius: 5px;
+  /* center */
+  position: relative;
+  cursor: pointer;
+}
+
+.searchbtn .fas {
+  /* center icon */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+}
+/* Resizing pages for multiple devices */
+@media only screen and (max-width: 320px) {
+  .right-side {
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .left-side {
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .project-group-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+  }
 }
