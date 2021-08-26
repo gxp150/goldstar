@@ -2,12 +2,14 @@
 var contact = (function(){
     var contactMarkup = {
         template : `
-            <div class="content-wrapper">
-            <div class="two-column-wrapper">
-            <div class="profile-image-wrapper">
-                <img src="images/building_mono.jpg" alt="External Building Image" />
-            </div>
-            <div class="content-wrapper">
+        <div class="one-column-wrapper">
+         <header class="contact-image-wrapper">
+            <img src="images/black_banner3.png" alt="geometric mono refrigeration system image"/>
+         </header>
+       
+         
+            
+         <div class="content-wrapper">
                 <h1>Contact us for a Quotation today</h1>
                 <p>
                 "Our team will go to any height to find the ideal refigeration and
@@ -20,9 +22,9 @@ var contact = (function(){
                 our sales specialists will commence your order today"
                 </p>
                 
-            </div>
-            </div>
         </div>
+        </div>
+            
       `
     };
     // Call it
