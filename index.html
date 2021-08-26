@@ -9,38 +9,30 @@
       href="https://fonts.googleapis.com/css2?family=Raleway&family=Titillium+Web:wght@300&family=Ubuntu:wght@300&display=swap"
       rel="stylesheet"
     />
+    <!-- styles -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
     />
     <link rel="stylesheet" href="gold_styles.css" />
 
+    <!-- scripts -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <!-- router required for page navigation - site directions -->
+    <script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
   </head>
   <body>
     <div id="app">
       <navigation></navigation>
       <mobile-navigation></mobile-navigation>
-      <markup></markup>
+      <router-view></router-view>
     </div>
-    <script>
-      /* from console tab in web developer so hover works over image not just text*/
-      const projectIndividual = document.querySelectorAll(
-        ".project-individual-wrapper"
-      );
-      /* Look its a  a function to iterate over all 12 projects*/
-      projectIndividual.forEach((projectIndividual) => {
-        projectIndividual.addEventListener("mouseover", () => {
-          /*console.log()projectIndividual);*/
-          /*console.log(projectIndividual.childNodes[1].classList);*/
-          projectIndividual.childNodes[1].classList.add("img-darken");
-        });
-        projectIndividual.addEventListener("mouseout", () => {
-          projectIndividual.childNodes[1].classList.remove("img-darken");
-        });
-      });
-    </script>
+    <!-- Goldstar components -->
+    <script src="components/products.js"></script>
     <script src="components/home.js"></script>
+    <script src="components/airconditioning.js"></script>
+    <script src="components/refrigeration.js"></script>
+    <script src="components/contact.js"></script>
     <script src="components/navigation.js"></script>
     <script src="./app.js"></script>
   </body>
