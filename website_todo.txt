@@ -1,19 +1,19 @@
 My to do list for Assignment 1
 
-1. Build the project (folder structure, images - see pixabay and unsplash.com - include credits)
-2. Navigation Bar (all links and business name)
-HOME (INDEX.HTML)
-REFRIGERATION - WITH PRODUCT SEARCH
-AIR CONDITIONING - WITH PRODUCT SEARCH
-CONTACT 
-3. SEARCH BARS (REFRIGERATION AND AIRCON)
-4. PRODUCT RANGE (IMAGES)
-5. PROJECTS (INCLUDE ON HOME PAGE TO BE EASILY LOCATED - NOT HIDDEN)
-6. ESTIMATE PAGE (FORM)
-7. PROCEED TO FORMAL QUOTE (FORM - WITH CAPTCHA AND VALIDATION)
-8. PRIVACY STATEMENT (LEGAL REQUIREMENT)
-9. COPYRIGHT
-10. BRAND CSS FOR STYLES 
+1. Build the project (folder structure, images - see pixabay and unsplash.com - include credits) - continuos
+2. Navigation Bar (all links and business name) - done
+HOME (INDEX.HTML) - done
+REFRIGERATION - WITH PRODUCT SEARCH - thinking just a quote and image gallery finding the products is hard with no industry knowledge, checked competitors and no one really has much
+AIR CONDITIONING - WITH PRODUCT SEARCH - done
+CONTACT - contact form create after week 8 prac
+3. SEARCH BARS (REFRIGERATION AND AIRCON) - done for air con
+4. PRODUCT RANGE (IMAGES) - done for air con
+5. PROJECTS (INCLUDE ON HOME PAGE TO BE EASILY LOCATED - NOT HIDDEN) - its ok
+6. ESTIMATE PAGE (FORM) - do after Wk8 prac
+7. PROCEED TO FORMAL QUOTE (FORM - WITH CAPTCHA AND VALIDATION) - not sure I can achieve but will add the captcha
+8. PRIVACY STATEMENT (LEGAL REQUIREMENT) - last item to do
+9. COPYRIGHT - second last item to do
+10. BRAND CSS FOR STYLES - done
 BRAND COLOUR RANGE
 H1
 H2
@@ -25,3 +25,14 @@ Use flex bot to align for elements
 Use grid align items for layout
 
 figma prototype - double check if this is in assessment requirement.
+
+Tasks
+* Rectify responsive issues - still requiring better styling for hamburger/navigation - its ok could be improved if have time
+* Add Vue Routing for page directions remove HTML pages and page links to active-link - happy with this
+* Add product image library - target adding 5 per week
+* Add search function - implemented and tested happy with this, adjusted styling to improve appearance
+* Add UX improved - its can be improved if complete site intime
+* Add timeline details - done
+* Improve all styling through each stage - continuous
+* Top priority is the FORMS!!!!! 
+* Estimator should be achievable using Week 7

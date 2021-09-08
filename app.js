@@ -1,6 +1,6 @@
 // self executing function expression keeps code out of the global scope
 (function () {
-    // router paths
+    // router paths - linking the destination
     var routes = [
         {
             path : "/",
@@ -24,12 +24,13 @@
         }
     ];
 
-    // router library
+    // router library mentioned in Week 3 and encouraged to explore, mentioned again Week 5 not yet coverered in full detail
     const router = new VueRouter({
         routes
         }),
         vm = new Vue({
             router,
+            // Oh look its a component, covered in Week 4
                 components : {
                     "navigation" : navigation.navigationMarkup,
                     "mobile-navigation" : navigation.mobileNavigationMarkup
