@@ -1,3 +1,4 @@
+// Utilise Week 7 Dynamic to assist in creating an interactive UX for the estimator
 var refrigeration = (function() {
     var refrigerationMarkup = {
     template : `

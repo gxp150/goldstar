@@ -1,3 +1,4 @@
+// Use Week 8 prac to modify and create a clean contact form
 // self executing function 
 var contact = (function(){
     var contactMarkup = {

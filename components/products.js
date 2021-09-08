@@ -1,7 +1,7 @@
 // self executing function
 var products = (function () {
     return [
-        // Creating an array to display products
+        // Creating an array to display products this was touched on from Week 1 onwards
         {
             id : 1,
             title : "Rinnai J-Series 5.0kW Reverse Cycle Split System Air Conditioner",
@@ -52,40 +52,136 @@ var products = (function () {
         },
         {
             id : 9,
-            title : "Mitsubishi",
+            title : "Mitsubishi 1.7kW Reverse Cycle Split System Air Conditioner",
             image : "mitsubishi_1_7kW.png",
-            price : 649
+            price : 679
         },
         
         {
             id : 10,
-            title : "Mitsubishi 3.2",
+            title : "Mitsubishi 3.2kW Inverter Split System Air Conditioner",
             image : "mitsubishi_3_2kW.jpeg",
             price : 546
         },
         {
             id : 11,
-            title : "Mitsubishi 5.0",
+            title : "Mitsubishi 5.0kw Inverter Split System Air Conditioner",
             image : "mitsubishi_5_0kW.jpeg",
             price : 727
         },
         {
             id : 12,
-            title : "Mitsubishi 7.1",
+            title : "Mitsubishi 7.1kW Inverter Split System Air Conditioner",
             image : "mitsubishi_7_1kW.jpeg",
             price : 777
         },
         {
             id : 13,
-            title : "Mitsubishi 8",
+            title : "Mitsubishi 8kW Inverter Split System Air Conditioner",
             image : "mitsubishi_8kW.jpeg",
             price : 890
         },
         {
             id : 14,
-            title : "Mitsubishi 9",
+            title : "Mitsubishi 9kW Inverter Split System Air Conditioner",
             image : "mitsubishi_9kW.jpeg",
             price : 980
+        },
+        {
+            id : 15,
+            title : "Fujitsu 7.1kW Reverse Cycle Inverter Split System",
+            image : "fujitsu_71kw.jpeg",
+            price : 1890
+        },
+        {
+            id : 16,
+            title : "Fujitsu 5kW Reverse Cycle Inverter Split System",
+            image : "fujitsu_5kW.jpeg",
+            price : 1395
+        },
+        {
+            id : 17,
+            title : "Dimplex 5kW Reverse Cycle Air Conditioner",
+            image : "dimplex_5kW.png",
+            price : 1590
+        },
+        {
+            id : 18,
+            title : "Hisense 5kW Reverse Cycle Air Conditioner",
+            image : "hisense_5kW.jpeg",
+            price : 1399
+        },
+        {
+            id : 19,
+            title : "Dimplex 3.5kW Inverter Split System Air Conditioner",
+            image : "Dimplex_35kW.jpeg",
+            price : 1100
+        },
+        {
+            id : 20,
+            title : "Samsung 5kW Reverse Cycle Split System Air Conditioner",
+            image : "samsung_5kW.jpeg",
+            price : 1590
+        },
+        {
+            id : 21,
+            title : "Samsung 3.5kW Reverse Cycle Split System Air Conditioner",
+            image : "samsung_35kW.jpeg",
+            price : 1100
+        },
+        {
+            id : 22,
+            title : "Kelvinator 7.1kW Reverse Cycle Inverter Split System",
+            image : "kelvinator_71kW.jpeg",
+            price : 1405
+        },
+        {
+            id : 23,
+            title : "Kelvinator 3.5kW Inverter Air Conditioner",
+            image : "kelvinator_35kW.jpeg",
+            price : 950
+        },
+        {
+            id : 24,
+            title : "Kelvinator 5kW Inverter Air Conditioner",
+            image : "Kelvinator_5kW.jpeg",
+            price : 1199
+        },
+        {
+            id : 25,
+            title : "Kelvinator 2.5kW Inverter Air Conditioner",
+            image : "kelvinator_25kW.jpeg",
+            price : 1199
+        },
+        {
+            id : 26,
+            title : "Apac 3.5kW Reverse Cycle Inverter Split System",
+            image : "APAC_HSNAP35_35kW.jpeg",
+            price : 780
+        },
+        {
+            id : 27,
+            title : "Apac 7kW Reverse Cycle Inverter Split System",
+            image : "APAC_HSNAP70_7kW.jpeg",
+            price : 1299
+        },
+        {
+            id : 28,
+            title : "Hisense 3.5kW Reverse Cycle Air Conditioner",
+            image : "hisense_35kW.jpeg",
+            price : 999
+        },
+        {
+            id : 29,
+            title : "Hisense 5kW Reverse Cycle Air Conditioner",
+            image : "hisense_5kW.jpeg",
+            price : 1400
+        },
+        {
+            id : 30,
+            title : "Hisense 7.1kW Reverse Cycle Air Conditioner",
+            image : "hisense_71kW.jpeg",
+            price : 1699
         },
     ]
         
