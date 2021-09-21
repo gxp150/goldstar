@@ -1,6 +1,7 @@
 // self executing function
 var products = (function () {
-    return [
+
+    var items = [
         // Creating an array to display products this was touched on from Week 1 onwards
         {
             id : 1,
@@ -183,6 +184,19 @@ var products = (function () {
             image : "hisense_71kW.jpeg",
             price : 1699
         },
-    ]
-        
+    ];
+// Creating a function to randomly assign dimensions to each product
+// To use for the estimator feature
+    function dimensions (items) {
+        // for loop iterating through the list of products returning it to products
+        for (let i = 0; i < items.length; i++) {
+            var rand = Math.ceil(Math.random(1) * 10);
+
+            items[i]["dimensions"] = rand;
+        }
+    }
+
+    dimensions(items);
+
+    return items;
 })();

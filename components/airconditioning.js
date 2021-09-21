@@ -8,15 +8,10 @@ var airCon = (function () {
                 <input
                     type="text"
                     class="input"
-                    v-on:keyup="searchProducts"
-                    placeholder="Search for a product..."
-                />
-                <a class="searchbtn fas fa-search"></a>
+                    v-model="search"
+                    placeholder="Search for a product..."/>
                 </div>
-                <img
-                src="images/black_banner.png"
-                alt="geometric black and yellow image"
-                />
+                <img src="images/black_banner.png" alt="geometric black and yellow image"/>
             </header>
 
             <div class="content-wrapper">
@@ -27,39 +22,55 @@ var airCon = (function () {
                 needs
                 </p>
                 <section class="product-wrapper">
-                    <article class="product-item" v-for="product in products">
-                    <div class="product-item-thumb" :style="{ backgroundImage : 'url(products/' + product.image + ')' }">
-                    </div>
+                <!-- Create Transition for products -->
+                    <transition-group
+                        name="staggered-fade"
+                        v-bind:css="false"
+                        v-on:before-enter="beforeEnter"
+                        v-on:enter="enter"
+                        v-on:leave="leave"    
+                    >
+                        <article class="product-item" v-for="(item, index) in computedList" v-bind:key="item.id">
 
-                    <p class="product-item-price">
-                    {{ "$" + product.price }}
-                    </p>
+                        <div class="product-item-thumb" :style="{ backgroundImage : 'url(products/' + item.image + ')' }">
+                        </div>
 
-                    <p class="product-item-title">
-                    {{ product.title }}
-                    </p>
+                        <p class="product-item-price">
+                        {{ "$" + item.price }}
+                        </p>
+
+                        <p class="product-item-title">
+                        {{ item.title }}
+                        </p>
 
 
-                    </article>
+                        </article>
+                    </transition-group>
                 </section>
             </div>
         </div>
+        
         `,
+        // creating a function for the product search
         data : function () {
             return {
-                products : products
+                list : products,
+                search : ""
+            }
+        },
+        computed : {
+            computedList : function() {
+                var vm = this;
+
+                return this.list.filter((item) => {
+                    var reg = new RegExp(`${this.escape(vm.search)}`, "igm");
+
+                    return item.title.match(reg);
+                });
             }
         },
         methods : {
-            searchProducts ({target}) {
-                this.products = products.filter((product) => {
-                    var reg = new RegExp(`${this.escape(target.value)}`, "igm");
-
-                    // alter the array
-                    if (product.title.match(reg)) return product;
-                });
-            },
-            // reducing errors
+            // preventing reg exp errors
             escape (text) {
                 text = text.replace(/(\.)/, "\\$1");
                 text = text.replace(/(\^)/, "\\$1");
@@ -73,9 +84,34 @@ var airCon = (function () {
                 text = text.replace(/(\\)/, "\\$1");
 
                 return text;
+            },
+
+            beforeEnter : function (e) {
+                e.style.cssText = `
+                    opacity: 0;
+                    `;
+            },
+            // creating error checks    
+            enter : function (e) {
+                setTimeout(() => {
+                    e.style.cssText = `
+                        opacity: 1;
+                    `;
+                }, 500);
+            },
+
+            leave : function (e) {
+                setTimeout(() => {
+                    // inline css reference, position absolute so products reshuffle
+                    e.style.cssText = `
+                    opacity: 0;
+                    position: absolute;
+                    `;
+                // 500 milisecond time out
+                }, 500);    
             }
         }
     };
-// Call the function
+
     return {airConMarkup};
 })();
