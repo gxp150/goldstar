@@ -16,6 +16,7 @@ body {
   grid-template-columns: 1fr;
   flex-wrap: wrap;
 }
+/* end master styling */
 
 /* navigational styling */
 .nav-wrapper {
@@ -37,7 +38,6 @@ body {
 .nav-wrapper > .right-side > div {
   margin-right: 10px;
   font-size: 0.9em;
-
   text-transform: uppercase;
 }
 
@@ -73,16 +73,16 @@ body {
   color: #abb2b9 !important;
 }
 
+/* Responsive Navigation Mobile menu */
 .hamburger {
-  background-color: white;
   border: 0;
   display: none;
   color: #abb2b9;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 23px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 15px;
+  right: 15px;
 }
 
 .hamburger.focus {
@@ -90,22 +90,47 @@ body {
 }
 
 .mobile-navigation-wrapper {
-  position: absolute;
+  position: fixed;
   right: 0px;
   top: 0px;
   user-select: none;
   display: none;
-  z-index: 1;
-  background-color: #fff;
+  z-index: 2;
+  display: none;
 }
 
 .mobile-menu {
-  margin-top: 20px;
+  margin-top: 70px;
 }
 
-.mobile-navigation-wrapper .nav-link-wrapper {
-  border-bottom: unset;
+.navigation-menu-wrapper {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #ffff33;
+  right: 0;
+  top: 0;
+  text-align: center;
+  z-index: 1;
 }
+
+.navigation-menu-wrapper .nav-link-wrapper {
+  border-bottom: unset;
+  margin: 10px 0;
+}
+
+.navigation-menu-wrapper .nav-link-wrapper a {
+  font-weight: 600;
+}
+
+.logo-wrapper img {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+/* End of Navigational Styles */
+
 /* Project Styles */
 .project-group-wrapper {
   display: grid;
@@ -156,11 +181,6 @@ body {
   opacity: 1;
 }
 
-.logo-wrapper img {
-  width: 50%;
-  margin-bottom: 20px;
-}
-
 .img-text-wrapper .subtitle {
   transition: 1s;
   font-weight: 600;
@@ -179,13 +199,69 @@ body {
   filter: brightness(15%);
 }
 
-/* Contact Us Styling */
-.two-column-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+/* End of Project Styles */
+
+/* Search bar */
+.search-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  max-width: 550px;
+  width: calc(100% - 10px);
+  padding: 5px;
+  border-radius: 10px;
 }
 
-/* Services Styling */
+.wrapper .input {
+  width: 85%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.searchbtn {
+  background: #ffff33;
+  border-radius: 5px;
+  padding: 0 10px;
+  border: unset;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  line-height: 20px;
+}
+
+.search-wrapper .input {
+  width: 100%;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  position: relative;
+  bottom: 1px;
+}
+
+.search-wrapper .input ::placeholder {
+  color: #fff;
+}
+
+button.searchbtn:hover {
+  background-color: #1c2833;
+  color: #ffff33;
+}
+
+.searchbtn .fas {
+  /* center icon */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+}
+/* End Search bar styling */
+
+/* Products/Services Styling */
 .one-column-wrapper {
   display: absolute;
   grid-template-columns: 1fr;
@@ -218,62 +294,8 @@ body {
   color: #1c2833;
 }
 
-/* Search bar */
-.search-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.6);
-  max-width: 550px;
-  width: 90%;
-  padding: 5px;
-  border-radius: 10px;
-  /* put the search icon on same row using flex */
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.wrapper .input {
-  width: 85%;
-  padding: 15px 20px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.searchbtn {
-  background: #ffff33;
-  width: 10%;
-  border-radius: 5px;
-  /* center */
-  position: relative;
-  cursor: pointer;
-  text-align: center;
-  line-height: 20px;
-}
-
-.input {
-  width: calc(100% - 11%);
-  background-color: transparent;
-  color: #fff;
-  border: none;
-}
-.input ::placeholder {
-  color: #fff;
-}
-
-.searchbtn .fas {
-  /* center icon */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 15px;
-}
 /* Products */
-.product-wrapper {
+.product-wrapper span {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   max-width: 1300px;
@@ -286,6 +308,7 @@ body {
   box-sizing: border-box;
   border: 1px solid #f2f2f2;
   margin: 10px;
+  transition: 0.2s;
 }
 
 .product-item-thumb {
@@ -306,6 +329,61 @@ body {
   font-weight: 600;
   color: #abb2b9 !important;
 }
+/* End Products Styling */
+
+/* Contact Us Styling */
+.two-column-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-group-wrapper {
+  width: 100%;
+}
+
+.contact-group {
+  padding: 10px;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+}
+
+.contact-info-wrapper {
+  width: calc(100% - 100px);
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Contact & Quote Form Styling */
+.contact-group-wrapper input[type="text"],
+.contact-group-wrapper select,
+.contact-group-wrapper textarea {
+  display: block;
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #abb2b9;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.contact-group-wrapper input[type="submit"] {
+  background-color: #ffff33;
+  color: #1c2833;
+  border-radius: 15px;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+}
+/* Style inputs */
+
+/* end form styling */
 
 /* Resizing pages for multiple devices */
 @media (max-width: 900px) {
@@ -319,6 +397,10 @@ body {
     display: block;
     align-items: flex-start;
     background-color: #ffff33;
+  }
+
+  .navigation-menu-wrapper {
+    display: block;
   }
 
   .nav-wrapper.show {
@@ -354,5 +436,14 @@ body {
     margin: 0 auto;
     width: 100%;
     background-color: rgb(0, 0, 0);
+  }
+}
+
+/* contact us media queries */
+
+@media (max-width: 1000px) {
+  .contact-group {
+    float: unset;
+    width: 100%;
   }
 }

@@ -5,34 +5,45 @@ My to do list for Assignment 1
 HOME (INDEX.HTML) - done
 REFRIGERATION - WITH PRODUCT SEARCH - thinking just a quote and image gallery finding the products is hard with no industry knowledge, checked competitors and no one really has much
 AIR CONDITIONING - WITH PRODUCT SEARCH - done
-CONTACT - contact form create after week 8 prac
-3. SEARCH BARS (REFRIGERATION AND AIRCON) - done for air con
+CONTACT - contact form create after week 8 prac - done in HTML and CSS, VueJS version not working
+3. SEARCH BARS (REFRIGERATION AND AIRCON) - done for air con 
 4. PRODUCT RANGE (IMAGES) - done for air con
 5. PROJECTS (INCLUDE ON HOME PAGE TO BE EASILY LOCATED - NOT HIDDEN) - its ok
-6. ESTIMATE PAGE (FORM) - do after Wk8 prac
-7. PROCEED TO FORMAL QUOTE (FORM - WITH CAPTCHA AND VALIDATION) - not sure I can achieve but will add the captcha
+6. ESTIMATE PAGE (FORM) - do after Wk8 prac - commenced
+7. PROCEED TO FORMAL QUOTE (FORM - WITH CAPTCHA AND VALIDATION) - added but no captcha
 8. PRIVACY STATEMENT (LEGAL REQUIREMENT) - last item to do
 9. COPYRIGHT - second last item to do
-10. BRAND CSS FOR STYLES - done
-BRAND COLOUR RANGE
-H1
-H2
-H3
-BODY
-links
+10. BRAND CSS FOR STYLES - BRAND COLOUR RANGE H1 H2 H3 BODY links done
 
 Use flex bot to align for elements
 Use grid align items for layout
-
 figma prototype - double check if this is in assessment requirement.
 
 Tasks
-* Rectify responsive issues - still requiring better styling for hamburger/navigation - its ok could be improved if have time
-* Add Vue Routing for page directions remove HTML pages and page links to active-link - happy with this
+* Rectify responsive issues - done
+* Add Vue Routing for page directions remove HTML pages and page links to active-link - done
 * Add product image library - target adding 5 per week
 * Add search function - implemented and tested happy with this, adjusted styling to improve appearance
 * Add UX improved - its can be improved if complete site intime
 * Add timeline details - done
 * Improve all styling through each stage - continuous
-* Top priority is the FORMS!!!!! 
-* Estimator should be achievable using Week 7
+* Top priority is the FORMS - done with base HTML and Vue element
+* Estimator should be achievable - postponed to go live date 24 October
+* Privacy Statement - postponed to go live date 24 October
+* Wish list - Google anaylytics vue details below.
+
+Install Google Analytics
+  (Create the company google analytics account first)
+
+  //to install vue-analytics in your console
+npm install vue-analytics
+//in your main.js, below loading your router
+...
+import router from './router'
+...
+import VueAnalytics from 'vue-analytics';
+//and then use it in main.js
+Vue.use(VueAnalytics, {
+    id: 'UA-12345678-1',
+    router
+}
