@@ -23,7 +23,7 @@
             
         }
     ];
-
+// Adding a plugin is a global asset as is utilised here with the Vue Router
     // router library mentioned in Week 3 and encouraged to explore, mentioned again Week 5 not yet coverered in full detail
     const router = new VueRouter({
         routes
